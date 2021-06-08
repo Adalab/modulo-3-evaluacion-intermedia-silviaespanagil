@@ -5,10 +5,8 @@ const Pokemon = (props) => {
   return (
     <>
       <article>
-        <li key={props.id}>
-          <img src={props.url}></img>
-          <h3>{props.name}</h3>
-        </li>
+        <img src={props.url}></img>
+        <h3>{props.name}</h3>
       </article>
     </>
   );
