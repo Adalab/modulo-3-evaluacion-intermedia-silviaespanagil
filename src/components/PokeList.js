@@ -1,7 +1,7 @@
 import React from "react";
 import Pokemon from "./Pokemon.js";
 
-const Pokedex = (props) => {
+const PokeList = (props) => {
   const pokemon = props.pokemons.map((pokemon) => {
     return (
       <li key={pokemon.id}>
@@ -22,4 +22,4 @@ const Pokedex = (props) => {
   );
 };
 
-export default Pokedex;
+export default PokeList;
