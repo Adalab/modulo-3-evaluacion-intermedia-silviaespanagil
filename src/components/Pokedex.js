@@ -4,7 +4,12 @@ import "../stylesheets/App.css";
 
 const Pokedex = (props) => {
   const pokemon = props.pokemons.map((pokemon) => {
-    return <li>{pokemon.id}</li>;
+    console.log(pokemon);
+    return (
+      <li key={pokemon.id}>
+        <h3>{pokemon.name}</h3>
+      </li>
+    );
   });
   return (
     <>
