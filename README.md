@@ -19,8 +19,8 @@ After a week of diving in React waters here comes my intermediate evaluation ✨
 - React
 
 ## Development ⌨️
-ho
-For start I wrote down my PokeList component which feeds  itself from the JSON prop that is hosted in the App component. 
+
+I began writting down my PokeList component which feeds  itself from the JSON prop that is hosted in the App component. 
 
 At PokeList I mapped the array so I could take the array objects and use them in the Pokemon.js component where I draw the cards using again props. You may notice that the Pokemon Type is an array inside my object so I had to map this also so I could render this information into the card.
 
