@@ -7,7 +7,7 @@ const Pokedex = (props) => {
     console.log(pokemon);
     return (
       <li key={pokemon.id}>
-        <Pokemon name={pokemon.name} url={pokemon.url} />
+        <Pokemon name={pokemon.name} url={pokemon.url} type={pokemon.types} />
       </li>
       /*<li key={pokemon.id}>
         <img src={pokemon.url}></img>

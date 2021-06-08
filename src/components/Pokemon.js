@@ -2,6 +2,10 @@ import React from "react";
 import "../stylesheets/App.css";
 
 const Pokemon = (props) => {
+  const pokeType = props.type.map((type) => {
+    console.log(type);
+    return <li>{type}</li>;
+  });
   return (
     <>
       <article>
