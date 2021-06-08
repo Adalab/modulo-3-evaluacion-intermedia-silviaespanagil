@@ -14,19 +14,27 @@
   display: flex;
   flex-wrap: wrap;
   padding: 25px;
+
   &__card {
-    padding: 20px;
     margin: 0 20px 20px 0;
     border: 2px solid $colorBlack;
     height: 220px;
     width: 160px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    &:hover {
+      background-color: $colorLightPink;
+    }
+
     &--name {
       text-transform: capitalize;
       font-weight: bold;
       text-align: center;
+      padding: 5px 5px;
+      border-top: 2px dotted $colorPink;
+      border-bottom: 2px dotted $colorPink;
     }
     &--img {
       width: 100px;
@@ -40,7 +48,9 @@
       padding: 2px;
       font-size: 0.8rem;
       background-color: $colorRed;
-      border-radius: 30%;
+      border-radius: 10%;
+      width: 80px;
+      height: 20px;
     }
   }
 }

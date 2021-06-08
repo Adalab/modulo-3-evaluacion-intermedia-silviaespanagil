@@ -11,12 +11,12 @@ const Pokemon = (props) => {
   return (
     <>
       <article className="pokedex__card">
-        <h3 className="pokedex__card--name">{props.name}</h3>
         <img
           className="pokedex__card--img"
           src={props.url}
           alt={props.name}
         ></img>
+        <h3 className="pokedex__card--name">{props.name}</h3>
         <div>{pokeType}</div>
       </article>
     </>
