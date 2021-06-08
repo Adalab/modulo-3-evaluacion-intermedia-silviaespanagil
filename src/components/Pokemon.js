@@ -3,7 +3,6 @@ import "../stylesheets/App.css";
 
 const Pokemon = (props) => {
   const pokeType = props.type.map((type, index) => {
-    console.log(type);
     return <li key={index}>{type}</li>;
   });
   return (
