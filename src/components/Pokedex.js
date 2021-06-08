@@ -1,6 +1,5 @@
 import React from "react";
 import Pokemon from "./Pokemon.js";
-import "../stylesheets/App.css";
 
 const Pokedex = (props) => {
   const pokemon = props.pokemons.map((pokemon) => {
@@ -17,7 +16,8 @@ const Pokedex = (props) => {
   });
   return (
     <>
-      <ul>{pokemon}</ul>
+      <h1 className="title">Mi lista de Pokemon</h1>
+      <ul className="pokedex">{pokemon}</ul>
     </>
   );
 };
