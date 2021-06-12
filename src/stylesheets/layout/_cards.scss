@@ -18,8 +18,9 @@
   &__card {
     margin: 0 20px 20px 0;
     border: 2px solid $colorBlack;
-    height: 220px;
-    width: 160px;
+    height: 250px;
+    padding: 10px 0;
+    width: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +30,7 @@
     }
 
     &--name {
-      text-transform: capitalize;
+      text-transform: uppercase;
       font-weight: bold;
       text-align: center;
       padding: 5px 5px;
@@ -51,6 +52,24 @@
       border-radius: 10%;
       width: 80px;
       height: 20px;
+    }
+    &--evolution {
+      text-transform: capitalize;
+      padding: 7px 0;
+    }
+    &--fav {
+      align-self: flex-end;
+      padding: 5px 10px;
+      background-color: rgba(255, 255, 255, 0);
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &-icon {
+        align-self: flex-end;
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0);
+      }
     }
   }
 }

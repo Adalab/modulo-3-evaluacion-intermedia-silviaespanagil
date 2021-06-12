@@ -6,6 +6,13 @@ const PokeList = (props) => {
   const pokemon = props.pokemons.map((pokemon) => {
     return (
       <li key={pokemon.id}>
+        <button
+          id={pokemon.id}
+          onClick={() => props.favPokemon(pokemon.id)}
+          className="pokedex__card--fav"
+        >
+          <i className="far fa-lg fa-heart pokedex__card--fav "></i>
+        </button>
         <Link to={`./pokemon/${pokemon.id}`}>
           <Pokemon
             id={pokemon.id}
