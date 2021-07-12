@@ -1,14 +1,15 @@
 .main {
   width: 100vw;
-  height: 100vh;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
+  padding-top: 50px;
 }
 .title {
+  text-align: center;
   font-family: $fontGame;
-  padding-bottom: 30px;
+  padding: 0 30px;
 }
 .pokedex {
   display: flex;
@@ -59,8 +60,11 @@
     }
     &--fav {
       align-self: flex-end;
+      position: relative;
+      top: 25px;
       padding: 5px 10px;
       background-color: rgba(255, 255, 255, 0);
+      color: $colorRed;
       &:hover {
         transform: scale(1.2);
       }

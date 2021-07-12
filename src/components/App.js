@@ -9,6 +9,7 @@ function App() {
   const [pokemons] = useState(data);
   const [favorites, setFavorites] = useState([]);
 
+  //render de la ruta dinamica
   const renderPokeDetail = (routerProps) => {
     const routerpokeId = routerProps.match.params.pokeId;
 
@@ -23,17 +24,17 @@ function App() {
       return <p>No hay pokemones</p>;
     }
   };
+
+  //arrayfav
+
   const favPokemon = (clickedPokemon) => {
     const pokemonFavorited = pokemons.find(
       (pokemon) => pokemon.id === clickedPokemon
     );
-    // console.log("hice click");
-    // console.log(pokemonFavorited);
-    // console.log(favorites);
-    // console.log(pokemons);
-    // console.log(clickedPokemon);
+
     if (!favorites.includes(pokemonFavorited)) {
       setFavorites([...favorites, pokemonFavorited]);
+      console.log(favorites);
       return;
     }
     const newFavoriters = favorites.filter(
@@ -47,7 +48,12 @@ function App() {
         <Switch>
           {/*HOME LISTA COMPLETA */}
           <Route exact path="/">
-            <PokeList pokemons={data} favPokemon={favPokemon} />;
+            <PokeList
+              pokemons={data}
+              favPokemon={favPokemon}
+              favorites={favorites}
+            />
+            ;
           </Route>
 
           {/*DETALLE */}

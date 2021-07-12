@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import Pokemon from "./Pokemon.js";
 
 const PokeList = (props) => {
-  const pokemon = props.pokemons.map((pokemon) => {
+  const pokemon = props.pokemons.map((pokemon, id) => {
+    const isFavorite = props.favorites.find(
+      (favorite) => favorite.id === pokemon.id
+    );
     return (
       <li key={pokemon.id}>
         <button
@@ -11,8 +14,15 @@ const PokeList = (props) => {
           onClick={() => props.favPokemon(pokemon.id)}
           className="pokedex__card--fav"
         >
-          <i className="far fa-lg fa-heart pokedex__card--fav "></i>
+          <i
+            className={
+              isFavorite
+                ? "fas fa-lg fa-heart pokedex__card--fav"
+                : "far fa-lg fa-heart pokedex__card--fav "
+            }
+          ></i>
         </button>
+
         <Link to={`./pokemon/${pokemon.id}`}>
           <Pokemon
             id={pokemon.id}

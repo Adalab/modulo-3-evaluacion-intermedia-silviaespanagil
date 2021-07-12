@@ -17,8 +17,7 @@ const Pokemon = (props) => {
           alt={props.name}
         ></img>
         <h3 className="pokedex__card--name">{props.name}</h3>
-        {/*error sintaxis el div deberia ser  un ul para los pokeType*/}
-        <div>{pokeType}</div>
+        <ul>{pokeType}</ul>
       </article>
     </>
   );

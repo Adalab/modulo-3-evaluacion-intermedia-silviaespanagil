@@ -31,7 +31,6 @@ const PokemonDetail = (props) => {
         <h3 className="pokedex__card--name">{props.pokeDetail.name}</h3>
         <p className="pokedex__card--evolution">
           Evolución: {renderEvolution()}
-          {/*props.pokeDetail.evolution*/}
         </p>
         <ul>{pokeType}</ul>
       </article>
