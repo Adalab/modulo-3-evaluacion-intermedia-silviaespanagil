@@ -6,8 +6,8 @@ const PokeList = (props) => {
   const favoritesPokedex = props.favorites.map((favorite, id) => {
     return (
       <>
-        <li key={id}>
-          <h3>{favorite.name}</h3>
+        <li key={id} className="favorites__pokemons--card">
+          <h3 className="favorites__pokemons--card-title">{favorite.name}</h3>
           <img src={favorite.url} alt={favorite.name} />
         </li>
       </>
@@ -48,11 +48,13 @@ const PokeList = (props) => {
   return (
     <>
       <h1 className="title">Mi lista de Pokemon</h1>
-      <ul className="pokedex">{pokemon}</ul>
-      <div>
-        <h2>Mi pokedex</h2>
-        <ul>{favoritesPokedex}</ul>
-      </div>
+      <section className="main__wrapper">
+        <ul className="pokedex">{pokemon}</ul>
+        <div className="favorites">
+          <h2 className="favorites__title">Mi Pokedex</h2>
+          <ul className="favorites__pokemons">{favoritesPokedex}</ul>
+        </div>
+      </section>
     </>
   );
 };
