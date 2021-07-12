@@ -45,18 +45,29 @@ const PokeList = (props) => {
       </li>
     );
   });
-  return (
-    <>
-      <h1 className="title">Mi lista de Pokemon</h1>
-      <section className="main__wrapper">
-        <ul className="pokedex">{pokemon}</ul>
-        <div className="favorites">
-          <h2 className="favorites__title">Mi Pokedex</h2>
-          <ul className="favorites__pokemons">{favoritesPokedex}</ul>
-        </div>
-      </section>
-    </>
-  );
+
+  if (favoritesPokedex.length !== 0) {
+    return (
+      <>
+        <h1 className="title">Mi lista de Pokemon</h1>
+        <section className="main__wrapper">
+          <ul className="pokedex">{pokemon}</ul>
+          <div className="favorites">
+            <h2 className="favorites__title">Mi Pokedex</h2>
+            <ul className="favorites__pokemons">{favoritesPokedex}</ul>
+          </div>
+        </section>
+      </>
+    );
+  } else
+    return (
+      <>
+        <h1 className="title">Mi lista de Pokemon</h1>
+        <section className="main__wrapper">
+          <ul className="pokedex">{pokemon}</ul>
+        </section>
+      </>
+    );
 };
 
 export default PokeList;
