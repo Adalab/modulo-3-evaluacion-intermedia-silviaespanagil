@@ -14,6 +14,7 @@
 .pokedex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 25px;
 
   &__card {
