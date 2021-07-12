@@ -1,7 +1,4 @@
 .main {
-  width: 100vw;
-  padding-top: 50px;
-
   &__wrapper {
     @media only screen and (min-width: 640px) {
       display: flex;

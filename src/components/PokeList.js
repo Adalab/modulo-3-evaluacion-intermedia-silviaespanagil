@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Pokemon from "./Pokemon.js";
 
 const PokeList = (props) => {
-  const favoritesPokedex = props.favorites.map((favorite, id) => {
+  const favoritesPokedex = props.favorites.map((favorite) => {
     return (
       <>
-        <li key={id} className="favorites__pokemons--card">
+        <li key={favorite} className="favorites__pokemons--card">
           <h3 className="favorites__pokemons--card-title">{favorite.name}</h3>
           <img src={favorite.url} alt={favorite.name} />
         </li>
@@ -14,12 +14,12 @@ const PokeList = (props) => {
     );
   });
 
-  const pokemon = props.pokemons.map((pokemon, id) => {
+  const pokemon = props.pokemons.map((pokemon, index) => {
     const isFavorite = props.favorites.find(
       (favorite) => favorite.id === pokemon.id
     );
     return (
-      <li key={pokemon.id}>
+      <li key={index}>
         <button
           id={pokemon.id}
           onClick={() => props.favPokemon(pokemon.id)}

@@ -18,11 +18,11 @@ const PokemonDetail = (props) => {
     }
   };
   return (
-    <>
-      <Link to="/">
+    <section className="pokeDetail">
+      <Link className="pokeDetail__back" to="/">
         <small>Volver</small>
       </Link>
-      <article className="pokedex__card">
+      <article className="pokeDetail__card">
         <img
           className="pokedex__card--img"
           src={props.pokeDetail.url}
@@ -34,7 +34,7 @@ const PokemonDetail = (props) => {
         </p>
         <ul>{pokeType}</ul>
       </article>
-    </>
+    </section>
   );
 };
 
