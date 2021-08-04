@@ -42,3 +42,6 @@ I'm an student and as I stated before am learning React and Javascript right now
 ## License
 
 MIT
+
+## Codefactor
+[![CodeFactor](https://www.codefactor.io/repository/github/silviaespanagil/make-your-pokedex/badge/master)](https://www.codefactor.io/repository/github/silviaespanagil/make-your-pokedex/overview/master)
